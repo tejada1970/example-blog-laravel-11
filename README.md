@@ -100,11 +100,11 @@ Ejecuta el siguiente comando en la terminal Git Bash para clonar el repositorio:
 
 **Configurar variables de entorno del proyecto:** Modifica las siguientes variables de entorno en el archivo .env del proyecto para almacenar y acceder a los datos registrados en la base de datos:
 
-- **DB_CONNECTION=**mysql # Si utilizas otro gestor de base de datos, pon el que corresponda
-- **DB_HOST=**127.0.0.1
-- **DB_PORT=**3306
-- **DB_DATABASE=**example-blog-laravel-11
-- **DB_USERNAME=**root # Si tu nombre de usuario no es root, pon el que corresponda
+- **DB_CONNECTION=** mysql # Si utilizas otro gestor de base de datos, pon el que corresponda
+- **DB_HOST=** 127.0.0.1
+- **DB_PORT=** 3306
+- **DB_DATABASE=** example-blog-laravel-11
+- **DB_USERNAME=** root # Si tu nombre de usuario no es root, pon el que corresponda
 - **DB_PASSWORD=** # Pon aquí tu contraseña para acceder a la base de datos. Si no tienes contraseña, déjalo en blanco
 
 
