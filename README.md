@@ -69,29 +69,44 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Características
 
-**Uso de base de datos:** Este proyecto necesita de una base de datos relacional (MySQL) para poder gestionar el contenido del blog, permitiendo almacenar, editar y eliminar publicaciones de manera eficiente.
+**Uso de base de datos:** Este proyecto necesita de una base de datos relacional (MySQL) para poder gestionar correctamente el contenido del blog, permitiendo almacenar, editar y eliminar publicaciones de manera eficiente.
 
 **Requisitos del servidor:** Para su correcto funcionamiento, el proyecto debe ejecutarse desde un servidor. Se recomienda utilizar XAMPP u otro servidor local para alojar la aplicación.
 
 **Es importante tener en cuenta que el propósito de este proyecto es demostrar cómo crear un blog personal y está destinado únicamente a fines prácticos y educativos.**
 
-## Uso
+## Proceso
 
-**Descarga:** Descarga el proyecto utilizando la opción Download ZIP desde el botón Code o clona el repositorio utilizando la terminal de Git.
-
-**Crear la base de datos:** Para garantizar el correcto funcionamiento del blog, se debe crear una base de datos (en este ejemplo se utiliza phpMyAdmin de Apache). Abre el panel de control de Apache como administrador, enciende Apache y MySQL, luego abre phpMyAdmin y crea una base de datos con el siguiente nombre:
+**Crear la base de datos:** Para garantizar el correcto funcionamiento del blog, se debe crear una base de datos (en este ejemplo se utiliza phpMyAdmin de Apache). Para ello, abre el panel de control de Apache como administrador, enciende Apache y MySQL, luego abre phpMyAdmin pulsando el botón 'Admin' situado junto a botón 'Start' de MySQL y crea una base de datos con el siguiente nombre:
 
 - example-blog-laravel-11
 
+**Descarga el proyecto:** Puedes utilizar la opción Download ZIP desde el botón Code o clonar el repositorio utilizando la terminal de Git Bash.
+
+**Clonar el repositorio:** Asegúrate de tener Git instalado en tu sistema. Puedes descargarlo e instalarlo desde git-scm.com. Abre la terminal Git Bash y navega a la carpeta 'htdocs' con el siguiente comando:
+
+- cd C:/xampp/htdocs
+
+Obtén la URL del repositorio que deseas clonar desde GitHub. Esta URL se encuentra en la página principal del repositorio en GitHub, en el botón verde que dice "Code".
+
+Ejecuta el siguiente comando en la terminal Git Bash para clonar el repositorio:
+
+- git clone https://github.com/tejada1970/example-blog-laravel-11.git
+
+**Instalar dependencias:** Una vez clonado el proyecto, abrelo con tu editor preferido (Se recomienda Visual Studio Code) y ejecuta el siguiente comando en la terminal de tu editor para instalar las dependencias necesarias:
+
+- composer install
+
+
 **Configurar variables de entorno del proyecto:** Modifica las siguientes variables de entorno en el archivo .env del proyecto para almacenar y acceder a los datos registrados en la base de datos:
-   
-- DB_CONNECTION=mysql
-- DB_HOST=127.0.0.1
-- DB_PORT=3306
-- DB_DATABASE=example-blog-laravel-11
-- DB_USERNAME=root  # Si tu nombre de usuario no es root, pon el que corresponda
-- DB_PASSWORD=      # Pon aquí tu contraseña para acceder a la base de datos. Si no tienes contraseña, déjalo en blanco
-   
+
+- **DB_CONNECTION=**mysql # Si utilizas otro gestor de base de datos, pon el que corresponda
+- **DB_HOST=**127.0.0.1
+- **DB_PORT=**3306
+- **DB_DATABASE=**example-blog-laravel-11
+- **DB_USERNAME=**root # Si tu nombre de usuario no es root, pon el que corresponda
+- **DB_PASSWORD=** # Pon aquí tu contraseña para acceder a la base de datos. Si no tienes contraseña, déjalo en blanco
+
 
 **Inicializar y poblar la base de datos:** Abre la terminal en tu editor preferido (se recomienda Visual Studio Code) y ejecuta los siguientes comandos para inicializar y poblar la base de datos con datos ficticios:
 
