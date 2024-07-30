@@ -63,4 +63,67 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## License
 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Características
+
+**Uso de base de datos:** Este proyecto necesita de una base de datos relacional (MySQL) para poder gestionar el contenido del blog, permitiendo almacenar, editar y eliminar publicaciones de manera eficiente.
+
+**Requisitos del servidor:** Para su correcto funcionamiento, el proyecto debe ejecutarse desde un servidor. Se recomienda utilizar XAMPP u otro servidor local para alojar la aplicación.
+
+**Es importante tener en cuenta que el propósito de este proyecto es demostrar cómo crear un blog personal y está destinado únicamente a fines prácticos y educativos.**
+
+## Uso
+
+1. **Descarga:**
+
+    - Descarga el proyecto utilizando la opción Download ZIP desde el botón Code o clona el repositorio utilizando la terminal de Git.
+
+2. **Crear la base de datos:**
+
+    - Para garantizar el correcto funcionamiento del blog, se debe crear una base de datos (en este ejemplo se utiliza phpMyAdmin de Apache). Abre el panel de control de Apache como administrador, enciende Apache y MySQL, luego abre phpMyAdmin y crea una base de datos con el siguiente nombre:
+
+    example-blog-laravel-11
+
+3. **Configurar variables de entorno del proyecto:**
+
+    - Modifica las siguientes variables de entorno en el archivo .env del proyecto para almacenar y acceder a los datos registrados en la base de datos:
+
+    ```
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=example-blog-laravel-11
+    DB_USERNAME=root  # Si tu nombre de usuario no es root, pon el que corresponda
+    DB_PASSWORD=      # Pon aquí tu contraseña para acceder a la base de datos. Si no tienes contraseña, déjalo en blanco
+    ```
+
+4. **Inicializar y poblar la base de datos:**
+
+    - Abre la terminal en tu editor preferido (se recomienda Visual Studio Code) y ejecuta los siguientes comandos para inicializar y poblar la base de datos con datos ficticios:
+
+    **Inicializa vite:** npm run dev
+
+    **Arranca el servidor PHP:** php artisan serve
+
+    **Ejecuta los seeders:** php artisan migrate:fresh --seed
+
+
+5. **Crear enlace simbólico para almacenamiento:**
+
+    - Asegúrate de que la carpeta public del proyecto contiene un enlace simbólico a storage para que se cree una copia de la carpeta posts con todas las imágenes de las publicaciones. Si no existe, crea el enlace ejecutando el siguiente comando desde la terminal de tu editor:
+
+    php artisan storage:link
+
+
+6. **Credenciales de acceso:**
+
+    - En el archivo database/seeders/UserSeeder.php del proyecto, se especifican las siguientes credenciales para el primer registro de la tabla de usuarios. Puedes personalizar estos datos para ingresar sin necesidad de registrarte:
+
+    ```
+    'name' => 'Mi nombre',
+    'email' => 'micorreo@gmail.com',
+    'password' => bcrypt('12345678')
+    ```
