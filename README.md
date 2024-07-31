@@ -93,12 +93,17 @@ Ejecuta el siguiente comando en la terminal Git Bash para clonar el repositorio:
 
 - git clone https://github.com/tejada1970/example-blog-laravel-11.git
 
-**Instalar dependencias:** Una vez clonado el proyecto, abrelo con tu editor preferido (Se recomienda Visual Studio Code) y ejecuta el siguiente comando en la terminal de tu editor para instalar las dependencias necesarias:
+**Instalar dependencias:** Una vez clonado el proyecto, abrelo con tu editor preferido (Se recomienda Visual Studio Code) y ejecuta los siguientes comandos en la terminal de tu editor para instalar las dependencias necesarias:
 
 - composer install
 
+- npm install
 
-**Configurar variables de entorno del proyecto:** Modifica las siguientes variables de entorno en el archivo .env del proyecto para almacenar y acceder a los datos registrados en la base de datos:
+**Configurar variables de entorno del proyecto:** Copia el archivo .env.example a un archivo .env desde la terminal de tu editor utilizando el siguiente comando:
+
+- cp .env.example .env
+
+Descomenta y sustituye las siguientes variables de entorno en el archivo .env del proyecto por las que se especifican a continuación para almacenar y acceder a los datos registrados en la base de datos:
 
 - **DB_CONNECTION=** mysql # Si utilizas otro gestor de base de datos, pon el que corresponda
 - **DB_HOST=** 127.0.0.1
@@ -107,20 +112,34 @@ Ejecuta el siguiente comando en la terminal Git Bash para clonar el repositorio:
 - **DB_USERNAME=** root # Si tu nombre de usuario no es root, pon el que corresponda
 - **DB_PASSWORD=** # Pon aquí tu contraseña para acceder a la base de datos. Si no tienes contraseña, déjalo en blanco
 
+**Genera la clave de aplicación:** Ejecuta el siguiente comando para generar una clave de aplicación:
+
+- php artisan key:generate
+
+En esta parte de las variables de entorno de tu archivo .env del proyecto deberá aparecer la key generada APP_KEY=:
+
+- **APP_NAME=** Laravel
+- **APP_ENV=** local
+- **APP_KEY=** # key generada
+- **APP_DEBUG=** true
+- **APP_TIMEZONE=** UTC
+- **APP_URL=** http://localhost
+
+**Crear enlace simbólico para almacenamiento:** Asegúrate de que la carpeta public del proyecto contiene un enlace simbólico a storage para que se cree una copia de la carpeta posts con todas las imágenes de las publicaciones. Si no existe, crea el enlace ejecutando el siguiente comando desde la terminal de tu editor:
+
+- rm public/storage
+
+- php artisan storage:link
 
 **Inicializar y poblar la base de datos:** Abre la terminal en tu editor preferido (se recomienda Visual Studio Code) y ejecuta los siguientes comandos para inicializar y poblar la base de datos con datos ficticios:
 
 - **Inicializa vite:** npm run dev
 
-- **Arranca el servidor PHP:** php artisan serve
+- **Añade otra trerminal y arranca el servidor PHP:** php artisan serve
 
-- **Ejecuta los seeders:** php artisan migrate:fresh --seed
+- **Añade otra trerminal y ejecuta los seeders:** php artisan migrate:fresh --seed
 
-
-**Crear enlace simbólico para almacenamiento:** Asegúrate de que la carpeta public del proyecto contiene un enlace simbólico a storage para que se cree una copia de la carpeta posts con todas las imágenes de las publicaciones. Si no existe, crea el enlace ejecutando el siguiente comando desde la terminal de tu editor:
-
-- php artisan storage:link
-
+- **Abre una nueva pestaña en el navegador de tu preferencia y escribe:** http://127.0.0.1:8000/ para abrir y ver el proyecto.
 
 **Credenciales de acceso:** En el archivo database/seeders/UserSeeder.php del proyecto, se especifican las siguientes credenciales para el primer registro de la tabla de usuarios. Puedes personalizar estos datos para ingresar sin necesidad de registrarte:
 
