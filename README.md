@@ -135,9 +135,9 @@ En esta parte de las variables de entorno de tu archivo .env del proyecto deber�
 
 - **Inicializa vite:** npm run dev
 
-- **Añade otra trerminal y arranca el servidor PHP:** php artisan serve
+- **Añade otra terminal y arranca el servidor PHP:** php artisan serve
 
-- **Añade otra trerminal y ejecuta los seeders:** php artisan migrate:fresh --seed
+- **Añade otra terminal y ejecuta los seeders:** php artisan migrate:fresh --seed
 
 - **Abre una nueva pestaña en el navegador de tu preferencia y escribe:** http://127.0.0.1:8000/ para abrir y ver el proyecto.
 
