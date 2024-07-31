@@ -79,7 +79,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 **Crear la base de datos:** Para garantizar el correcto funcionamiento del blog, se debe crear una base de datos (en este ejemplo se utiliza phpMyAdmin de Apache). Para ello, abre el panel de control de Apache como administrador, enciende Apache y MySQL, luego abre phpMyAdmin pulsando el botón 'Admin' situado junto a botón 'Start' de MySQL y crea una base de datos con el siguiente nombre:
 
-- example-blog-laravel-11
+- example-blog-laravel-11-db
 
 **Descarga el proyecto:** Puedes utilizar la opción Download ZIP desde el botón Code o clonar el repositorio utilizando la terminal de Git Bash.
 
@@ -108,7 +108,7 @@ Descomenta y sustituye las siguientes variables de entorno en el archivo .env de
 - **DB_CONNECTION=** mysql # Si utilizas otro gestor de base de datos, pon el que corresponda
 - **DB_HOST=** 127.0.0.1
 - **DB_PORT=** 3306
-- **DB_DATABASE=** example-blog-laravel-11
+- **DB_DATABASE=** example-blog-laravel-11-db
 - **DB_USERNAME=** root # Si tu nombre de usuario no es root, pon el que corresponda
 - **DB_PASSWORD=** # Pon aquí tu contraseña para acceder a la base de datos. Si no tienes contraseña, déjalo en blanco
 
